@@ -1,0 +1,56 @@
+.cta {
+	background-color: $color-primary;
+	padding: $padding-medium;
+	font-family: $font-secondary;
+	@include flex-center(row, center);
+
+	&__container {
+		max-width: 1340px;
+		width: 100%;
+		color: $color-white;
+		@include flex-center(row, space-between);
+		gap: $gap-large;
+	}
+
+	&__content {
+		max-width: 600px;
+		@include flex-center(column, flex-start);
+	}
+
+	&__title {
+		font-size: $font-size-title;
+		font-weight: $font-weight-medium;
+	}
+
+	&__description {
+		font-family: $font-primary;
+		font-size: $font-size-small;
+		font-weight: $font-weight-regular;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: $gap-medium;
+		width: 658px;
+	}
+
+	&__input {
+		font-size: $font-size-small;
+		border: none;
+		outline: none;
+		padding: 12px 14px;
+		border-radius: $border-radius-input;
+		height: 64px;
+		color: $color-dark-text;
+
+		&::placeholder {
+			color: $color-dark-text;
+		}
+	}
+
+	&__button {
+		@include button-style($color-white, $color-primary, $font-size-medium, 15px);
+		width: 213px;
+	}
+}

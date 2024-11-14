@@ -1,0 +1,44 @@
+.hero {
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-family: $font-secondary;
+	@include flex-center(row, center);
+
+	&__container {
+		max-width: 1340px;
+		width: 100%;
+		@include flex-center(row, space-between);
+	}
+
+	&__content {
+		@include flex-center(column, start, start);
+		background: $color-primary;
+		width: 889px;
+		min-height: 519px;
+		border-radius: $border-radius-standard;
+		margin-right: $gap-medium;
+		color: $color-white;
+		padding: 80px 100px;
+	}
+
+	&__title {
+		font-family: $font-secondary;
+		font-size: $font-size-title;
+		font-weight: $font-weight-bold;
+	}
+
+	&__subtitle {
+		margin-top: $gap-small;
+	}
+
+	&__image {
+		width: 433px;
+		height: 519px;
+	}
+
+	&__button {
+		@include button-style($color-secondary, $color-primary, $font-size-medium, 14px 20px);
+		margin-top: $gap-large;
+	}
+}

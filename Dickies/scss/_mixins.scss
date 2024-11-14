@@ -1,0 +1,41 @@
+// Flex Center Mixin
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+// Button Style Mixin
+@mixin button-style(
+	$bg-color: $color-primary,
+	$text-color: $color-white,
+	$font-size: $font-size-small,
+	$padding: $padding-small
+) {
+	background-color: $bg-color;
+	color: $text-color;
+	font-size: $font-size;
+	border-radius: $border-radius-standard;
+	border: none;
+	cursor: pointer;
+	padding: $padding;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// Circle Button Mixin
+@mixin button-circle($bg-color: $color-primary, $text-color: $color-white, $size: 36px) {
+	background-color: $bg-color;
+	color: $text-color;
+	border: none;
+	border-radius: 50%;
+	font-size: 18px;
+	width: $size;
+	height: $size;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}

@@ -1,0 +1,118 @@
+.testimonials {
+	padding: $padding-section;
+	background: $color-secondary;
+	font-family: $font-secondary;
+	@include flex-center(column, center);
+
+	&__title-container {
+		width: 100%;
+		max-width: 1340px;
+		@include flex-center(row, flex-start);
+		margin-bottom: $gap-medium;
+	}
+
+	&__title {
+		font-size: $font-size-title;
+		font-weight: $font-weight-bold;
+		color: $color-primary;
+	}
+
+	&__container {
+		@include flex-center(row, center);
+		max-width: 1340px;
+		gap: $gap-medium;
+	}
+
+	.testimonial {
+		background-color: $color-white;
+		border: 1px solid $color-primary;
+		border-radius: $border-radius-standard;
+		padding: $padding-small;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		max-width: 658px;
+		width: 100%;
+		@include flex-center(row);
+
+		&__image {
+			width: 200px;
+			height: 225px;
+			border-radius: 10px;
+			object-fit: cover;
+		}
+
+		&__content {
+			@include flex-center(column, start, start);
+			text-align: left;
+			margin-left: 20px;
+		}
+
+		&__name {
+			color: $color-dark-text;
+			margin-bottom: $gap-small;
+			font-size: $font-size-medium;
+			font-weight: $font-weight-medium;
+		}
+
+		&__role {
+			color: $color-muted-text;
+			margin-bottom: $gap-small;
+			font-family: $font-primary;
+			font-size: $font-size-small;
+			font-weight: $font-weight-regular;
+		}
+
+		&__rating {
+			color: $color-rating;
+			margin-bottom: $gap-small;
+			font-size: $font-size-small;
+		}
+
+		&__text {
+			color: $color-dark-text;
+			font-family: $font-primary;
+			font-size: $font-size-small;
+			font-weight: $font-weight-regular;
+		}
+	}
+
+	&__pagination-container {
+		width: 100%;
+		@include flex-center(row, center);
+		margin-top: $gap-large;
+	}
+
+	&__pagination {
+		@include flex-center(row, center);
+		gap: $gap-medium;
+		padding: 12px 14px;
+		border-radius: 100px;
+		border: 1px solid $color-accent;
+		width: fit-content;
+
+		.pagination__button {
+			@include button-circle;
+
+			&--prev {
+				background: $color-accent;
+			}
+		}
+
+		.pagination__dots {
+			display: flex;
+			gap: 4px;
+
+			.dot {
+				background: $color-accent;
+				cursor: pointer;
+				width: 13px;
+				height: 4px;
+				border-radius: 20px;
+
+				&.active {
+					background-color: $color-primary;
+					width: 24px;
+				}
+			}
+		}
+	}
+}

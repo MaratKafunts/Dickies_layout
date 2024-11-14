@@ -1,0 +1,68 @@
+.header {
+	width: 100%;
+	font-family: $font-secondary;
+	padding: $padding-small;
+	background: $color-secondary;
+
+	@include flex-center(column);
+
+	&__logo {
+		width: $logo-size;
+		height: $logo-size;
+	}
+
+	&__container {
+		max-width: 1340px;
+		width: 100%;
+		@include flex-center(row, space-between);
+	}
+
+	&__nav {
+		@include flex-center(row, space-between);
+		width: 100%;
+	}
+
+	&__menu {
+		@include flex-center(row, center);
+		gap: $gap-large;
+		font-size: $font-size-standard;
+		font-weight: $font-weight-medium;
+
+		&-item {
+			@include flex-center(row, center);
+		}
+
+		&-item img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__link {
+		color: $color-dark-text;
+		font-family: $font-primary;
+		font-size: $font-size-standard;
+		font-weight: $font-weight-medium;
+		position: relative;
+
+		&:hover::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -10px;
+			height: 2px;
+			background-color: $color-primary;
+			width: 130%;
+			transition: width 0.3s ease;
+		}
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+
+	&__button {
+		@include button-style($color-primary, $color-white, $font-size-medium, 14px 30px);
+	}
+}

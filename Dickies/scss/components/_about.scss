@@ -1,0 +1,91 @@
+.about {
+	@include flex-center(column, center);
+	font-family: $font-secondary;
+
+	&__link {
+		@include flex-center(row, center);
+		gap: $gap-small;
+
+		span {
+			font-family: $font-primary;
+			font-size: $font-size-medium;
+			font-weight: $font-weight-medium;
+			color: $color-dark-text;
+		}
+	}
+
+	&__container {
+		padding-top: $padding-medium;
+		background: $color-secondary;
+		max-width: 1340px;
+		width: 100%;
+		display: grid;
+		gap: $gap-medium;
+		grid-template-areas:
+			"header header header"
+			"imagee text text"
+			"imagee metric1 metric2";
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto auto auto;
+	}
+
+	&__header {
+		grid-area: header;
+		@include flex-center(row, space-between);
+	}
+
+	&__text-block {
+		@include flex-center(column);
+		grid-area: text;
+		background: $color-primary;
+		border-radius: $border-radius-standard;
+		color: $color-white;
+		padding: 22px 32px;
+	}
+
+	&__metric {
+		border-radius: $border-radius-standard;
+		color: $color-white;
+		background-color: $color-primary;
+		@include flex-center(column);
+
+		&-number {
+			font-size: $font-size-title;
+			font-weight: $font-weight-medium;
+			text-align: center;
+		}
+
+		&-text {
+			font-family: $font-primary;
+			font-size: $font-size-small;
+			font-weight: $font-weight-regular;
+			line-height: 27px;
+			text-align: center;
+		}
+	}
+
+	&__image {
+		grid-area: imagee;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	&__title {
+		font-size: $font-size-title;
+		font-weight: $font-weight-medium;
+		color: $color-primary;
+	}
+
+	&__subtitle {
+		font-size: $font-size-subtitle;
+		font-weight: $font-weight-medium;
+	}
+
+	&__description {
+		font-size: $font-size-small;
+		font-weight: $font-weight-regular;
+		font-family: $font-primary;
+	}
+}

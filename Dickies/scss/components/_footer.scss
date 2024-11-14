@@ -1,0 +1,54 @@
+.footer {
+	@include flex-center(row, center);
+	width: 100%;
+	background-color: $color-secondary;
+
+	&__container {
+		max-width: 1340px;
+		width: 100%;
+		padding: $padding-footer;
+		@include flex-center(row, space-between);
+	}
+
+	&__logo {
+		@include flex-center(row, flex-start);
+		flex: 1;
+
+		img {
+			width: $logo-size;
+			height: $logo-size;
+		}
+	}
+
+	&__navigation {
+		@include flex-center(row, flex-start);
+		flex: 1;
+	}
+
+	&__item a {
+		font-family: $font-primary;
+		font-size: $font-size-standard;
+		font-weight: $font-weight-medium;
+		color: $color-dark-text;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+
+	&__policy {
+		flex: 2;
+		text-align: center;
+		color: $color-primary;
+		font-family: $font-primary;
+		font-size: $font-size-standard;
+		font-weight: $font-weight-regular;
+	}
+
+	&__menu {
+		@include flex-center(row, flex-end);
+		gap: $gap-small;
+		flex: 3;
+	}
+}
